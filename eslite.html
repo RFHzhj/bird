@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>诚品</title>
+		<link rel="stylesheet" href="css/reset.css	" />
+		<style>
+			body{
+				background-color: #F6F6F6;
+			}
+			/*导航开始*/
+			header{
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+				background-color: #24292C;
+				overflow: hidden;	
+			}
+			.wrap{
+				width: 900px;
+				height: 100%;
+				margin: 0 auto;
+				
+			}
+			.logo{
+				width: 125px;
+				height: 35px;
+				float: left;
+			}
+			.logo img{
+				width: 100%;
+				height: 100%;
+			}	
+			.nav{
+				margin-left: 20px;
+				float: left;
+			}
+			.nav>ul{
+				list-style: none;
+				overflow: hidden;
+			}
+			.nav li{
+				float: left;
+				height: 80px;
+				padding: 0 4px;
+				line-height: 80px;
+				position: relative;
+			}
+			
+			.nav li a{
+				color: #fff;
+				text-decoration: none;
+				padding: 3px 3px;
+				
+				/*display: inline-block;*/
+			}
+			.nav .color>a{
+				background-color: #109E5C;
+			}
+			.nav li .tri{
+				position: absolute;
+				left: 10px;
+				bottom: 0;
+				width: 0;
+				height: 0;
+				border: 10px  transparent solid;
+				border-bottom: #fff 10px solid;
+				/*display: none;*/
+			}
+			/*.nav li.color .tri{
+				display: block;
+			}*/
+			.nav li.active>a{
+				position: relative;
+			}
+			.nav li.active>a>span{
+				position: absolute;
+				left: 35px;
+				top: -8px;
+				width: 18px;
+				height: 18px;
+				border-radius: 50%;
+				background-color: red;
+				color: #fff;
+				line-height: 18px;
+				text-align: center;
+			}
+			.enter{
+				float: right;
+				width: 250px;
+				height: 20px;
+				
+			}
+			.enter .enter_left{
+				width: 120px;
+				height: 20px;
+				float: left;
+				margin-top: 30px;
+			
+			}
+			
+			.enter_left input{
+				width: 100px;
+				height: 20px;
+				background-color: #000000;
+				border: none;
+				float: left;
+				border-radius:  30px 0 0 30px;
+			}
+			.enter_left button{
+				width: 20px;
+				height: 20px;
+				float: left;
+				border: none;
+				background-color: #27BD75;
+				color: #fff;
+				font-size: 12px;
+				border-radius: 0 30px 30px 0;
+			}
+			.enter .enter_right{
+				width: 100px;
+				height: 20px;
+				float:left;
+				margin-left: 25px;
+			}
+			.enter_right ul{
+				list-style: none;
+			}
+			.enter_right ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.enter_right ul li a{
+				font-size: 12px;
+				color: #fff;
+				text-decoration: none;
+			}
+/*导航结束*/			
+/*诚品导航开始*/			
+			.wrapnav{
+				width: 980px;
+				margin: 0 auto;
+				margin-bottom: 30px;
+				overflow: hidden;
+			}
+			.navcheng{
+				background-color: #fff;
+				box-shadow: 0 2px 2px #ccc;
+			}
+			.navcheng ul{
+				overflow: hidden;
+			}
+			.navcheng li{
+				float: left;
+				width: 70px;
+				height: 55px;
+				line-height: 55px;
+				margin: 5px;
+			}
+			.navcheng li a{
+				padding: 5px;
+				color: #333;
+				font-size: 15px;
+			}
+			.navcheng .all a{
+				color: #8FD0AE;
+			}
+			.navcheng .all{
+				border-top: 2px solid #8FD0AE;
+			}
+/*诚品导航结束*/	
+/*图片开始*/
+			.cuppic{
+				width: 490px;
+				height: 250px;
+				float: left;
+			}	
+			.cuppic img,.people img{
+				width: 100%;
+				height: 100%;
+			}	
+			.cuptext{
+				width: 490px;
+				height: 250px;
+				float: left;
+				background-color: #fff;
+				padding: 20px;
+				box-sizing: border-box;
+				text-align: left;
+			}
+			.cuptext h3{
+				margin-bottom: 10px;
+			}
+			.cuptext p{
+				color: #ccc;
+				line-height: 40px;
+			}
+			.product{
+				width: 115px;
+				height: 30px;
+				background-color: #E32929;
+				color: #fff;
+				line-height: 30px;
+				text-align: center;
+				margin-top: 20px;
+				font-size: 16px;
+			}
+			.people{
+				height: 430px;
+			}
+			.peopletext{
+				height: 430px;
+				padding: 60px;
+			}
+/*图片结束*/
+/*页脚开始*/
+			footer{
+				background-color: #fff;
+				width: 100%;
+				height: 190px;
+			}
+		
+			.link{
+				border-bottom: 1px solid #C3C3C3;
+				width: 100%;
+				height: 115px;
+			}
+			.link p{
+				margin-bottom: 10px;
+				font-size: 14px;
+				text-align: left;
+			}
+			.link ul{
+				height: :15px;
+				list-style: none;
+				text-align: left;
+				float: left;
+			}
+			.link ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.link ul li a{
+				color: gray;
+				font-size: 10px;
+				text-decoration: none;
+			}
+			.QRcode{
+				margin-bottom: 50px;
+			}
+			.QRcode>img{
+				width: 55px;
+				height: 55px;
+			}
+			.wrap2{
+				width: 400px;
+				height: 30px;
+				margin:  0 auto;
+				color: #333;
+			}
+			.wrap2.ul li{
+				float: left;
+			}
+			.wrap3{
+				margin: 0 auto;
+				width: 300px;
+				height: 20px;
+				font-size: 10px;
+				color: #ccc;
+			}
+			.wrap1{
+				margin: 0 auto;
+				width: 980px;
+				padding: 20px;
+			}
+/*页脚结束*/
+
+
+		</style>
+	</head>
+	<body>
+		<!--导航开始-->
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="nav">
+					<ul>
+						<li class="color"><a href="index.html">首页</a><span class="tri"></span></li>
+						<li><a href="movement.html">乐章</a></li>
+						<li class="active"><a href="#">音乐说 <span >12</span></a></li>
+						<li><a href="#">乐趣</a></li>
+						<li><a href="#">聊聊</a></li>
+						<li><a href="#">游记</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="eslite.html">成品</a></li>
+						<li><a href="#">蓝莓酱</a></li>
+						<li><a href="#">社区</a></li>
+					</ul>
+				</div>
+				<div class="enter">
+					<div class="enter_left">
+						<input type="text" />
+						<button><i>镜</i></button>
+					</div>
+					<div class="enter_right">
+						<ul>
+							<li><a href="register.html">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+<!--导航结束-->
+<!--诚品导航开始-->
+
+		<div class="navcheng">
+			<div class="wrapnav">
+				<ul>
+					<li class="all"><a href="">全部</a></li>
+					<li><a href="">马克杯</a></li>
+					<li><a href="">耳机</a></li>
+					<li><a href="">摆件</a></li>
+					<li><a href="">钱包</a></li>
+				</ul>
+			</div>
+		</div>
+<!--诚品导航结束-->
+<!--图片开始-->
+		<div class="cup">
+			<div class="wrapnav">
+				<div class="cuppic">
+					<img src="img/beizi.png" alt="" />
+				</div>
+				<div class="cuptext">
+					<h3>24款套手工麦克杯</h3>
+					<p>马克杯的意思是大柄杯子，因为马克杯的英文叫mug，所以翻译成马克杯。
+						马克杯是家常杯子的一种，一般用于牛奶、咖啡、茶类等热饮。西方一些国家也有用马克杯在工作休息时喝汤的习惯。</p>
+					<div class="product">
+						商品详情
+					</div>	
+				</div>
+				
+				<div class="cuptext peopletext">
+					<h3>24款套手工麦克杯</h3>
+					<p>马克杯的意思是大柄杯子，因为马克杯的英文叫mug，所以翻译成马克杯。
+						马克杯是家常杯子的一种，一般用于牛奶、咖啡、茶类等热饮。西方一些国家也有用马克杯在工作休息时喝汤的习惯。</p>
+					<div class="product">
+						商品详情
+					</div>	
+				</div>
+				<div class="cuppic people">
+					<img src="img/people.png" alt="" />
+				</div>
+				<div class="cuppic">
+					<img src="img/beizi.png" alt="" />
+				</div>
+				<div class="cuptext">
+					<h3>24款套手工麦克杯</h3>
+					<p>马克杯的意思是大柄杯子，因为马克杯的英文叫mug，所以翻译成马克杯。
+						马克杯是家常杯子的一种，一般用于牛奶、咖啡、茶类等热饮。西方一些国家也有用马克杯在工作休息时喝汤的习惯。</p>
+					<div class="product">
+						商品详情
+					</div>	
+				</div>
+				
+				<div class="cuptext peopletext">
+					<h3>24款套手工麦克杯</h3>
+					<p>马克杯的意思是大柄杯子，因为马克杯的英文叫mug，所以翻译成马克杯。
+						马克杯是家常杯子的一种，一般用于牛奶、咖啡、茶类等热饮。西方一些国家也有用马克杯在工作休息时喝汤的习惯。</p>
+					<div class="product">
+						商品详情
+					</div>	
+				</div>
+				<div class="cuppic people">
+					<img src="img/people.png" alt="" />
+				</div>
+			</div>
+		</div>
+<!--图片结束-->
+<!--页脚开始-->
+		<footer>
+			<div class="link">
+			<div class="wrap1">
+				<p>友情链接</p>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<div class="QRcode">
+					<img src="img/dimension1.png"/>
+					
+					<img src="img/QRcode.png"/>
+					
+				</div>
+			</div>
+			<div class="wrap2">
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">团队成员</a></li>
+					<li><a href="#">商务合作</a></li>
+				</ul>
+			</div>
+			<div class="wrap3">
+				<ul>
+					<li><a href="#">蓝莓派版权所有</a></li>
+					<li><a href="#">京IPC备1234567号</a></li>
+				</ul>
+			</div>
+		</div>
+		
+			
+			
+		</footer>
+<!--页脚结束-->
+	</body>
+</html>

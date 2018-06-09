@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<link rel="stylesheet" href="css/reset.css	" />
+		<!--<link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">-->
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<style>
+			/*导航开始*/
+			header{
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+				background-color: #24292C;
+				overflow: hidden;	
+			}
+			.wrap{
+				width: 900px;
+				height: 100%;
+				margin: 0 auto;
+				
+			}
+			.logo{
+				width: 125px;
+				height: 35px;
+				float: left;
+			}
+			.logo img{
+				width: 100%;
+				height: 100%;
+			}	
+			.nav{
+				margin-left: 20px;
+				float: left;
+			}
+			.nav>ul{
+				list-style: none;
+				overflow: hidden;
+			}
+			.nav li{
+				float: left;
+				height: 80px;
+				padding: 0 4px;
+				line-height: 80px;
+				position: relative;
+			}
+			
+			.nav li a{
+				color: #fff;
+				text-decoration: none;
+				padding: 3px 3px;
+				
+				/*display: inline-block;*/
+			}
+			.nav .color>a{
+				background-color: #109E5C;
+			}
+			.nav li .tri{
+				position: absolute;
+				left: 10px;
+				bottom: 0;
+				width: 0;
+				height: 0;
+				border: 10px  transparent solid;
+				border-bottom: #fff 10px solid;
+				/*display: none;*/
+			}
+			/*.nav li.color .tri{
+				display: block;
+			}*/
+			.nav li.active>a{
+				position: relative;
+			}
+			.nav li.active>a>span{
+				position: absolute;
+				left: 35px;
+				top: -8px;
+				width: 18px;
+				height: 18px;
+				border-radius: 50%;
+				background-color: red;
+				color: #fff;
+				line-height: 18px;
+				text-align: center;
+			}
+			.enter{
+				float: right;
+				width: 250px;
+				height: 20px;
+				
+			}
+			.enter .enter_left{
+				width: 120px;
+				height: 20px;
+				float: left;
+				margin-top: 30px;
+			
+			}
+			
+			.enter_left input{
+				width: 100px;
+				height: 20px;
+				background-color: #000000;
+				border: none;
+				float: left;
+				border-radius:  30px 0 0 30px;
+			}
+			.enter_left button{
+				width: 20px;
+				height: 20px;
+				float: left;
+				border: none;
+				background-color: #27BD75;
+				color: #fff;
+				font-size: 12px;
+				border-radius: 0 30px 30px 0;
+			}
+			.enter .enter_right{
+				width: 100px;
+				height: 20px;
+				float:left;
+				margin-left: 25px;
+			}
+			.enter_right ul{
+				list-style: none;
+			}
+			.enter_right ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.enter_right ul li a{
+				font-size: 12px;
+				color: #fff;
+				text-decoration: none;
+			}
+			
+/*导航结束*/
+/*背景图开始*/
+			.swiper-container {
+			    width: 100%;
+			    height: 400px;
+			    position: relative;
+			}  
+			/*.swiper-container img{
+				width: 100%;
+				height: 100%;
+			}*/
+			.Ireland{
+				width: 460px;
+				height: 180px;
+				background-color: rgba(0,0,0,.2);
+				position: absolute;
+				top: 110px;
+				left: 30px;
+				color: #fff;
+				font-size: 12px;
+				padding: 20px;
+			}
+			.Ireland h3{
+				text-align: center;
+				font-size: 16px;
+			}
+			.Ireland p{
+				line-height: 25px;
+			}
+			.swiper-pagination-bullet-active{opacity:1;background:#0E9F5D}
+/*背景图结束*/
+/*乐章开始*/
+			.yueZ,.listening,.interesting,.travelNote,.chating{
+				margin: 40px auto;
+				width: 110px;
+				height: 60px;
+			}
+			.music{
+				background-color: #fff;
+				width: 100%;					
+			}
+			.wrap{
+				width: 920px;
+				height: 340px;
+				margin: 0 auto;
+			}
+			.wrap>div:nth-child(1),.wrap>div:nth-child(3){
+				margin-right: 20px;
+			}
+			.wrap>div:nth-child(1),.wrap>div:nth-child(2){
+				margin-bottom: 20px;
+			}
+			.time{
+				width: 450px;
+				height: 160px;				
+				float: left;
+			}
+			.time img{
+				width: 160px;
+				height: 160px;
+				float: left;
+			}
+			.time .text{
+				width: 275px;
+				height: 160px;
+				float: left;
+				margin-left: 15px;
+				text-align: left;
+			}
+			.text h4{
+				font-size: 15px;
+				margin-top: 5px;
+			}
+			.text>p{
+				color: #A3DCF6;
+				font-size: 10px;
+				margin-top: 5px;
+				float: left;
+			}
+			.text span{
+				color: #ccc;
+				display: inline-block;
+				float: left;
+				margin-top: 5px;
+				margin-left: 10px;
+			}
+			.text .sun{
+				color: #333;
+				font-size: 14px;
+			}
+			.text i{
+				display: inline-block;
+				float: right;
+			}
+/*乐章结束*/
+/*听说开始*/
+			.hear{
+				width: 100%;
+				background-color: #F5F5F5;				
+			}
+			.linisting{
+				padding: 20px 0;
+			}
+			.wrap1{
+				width: 925px;
+				margin: 20px auto;
+			}
+			.Jay{
+				overflow: hidden;
+			}
+			.Jay img,.Jay div{
+				width: 185px;
+				height: 215px;
+				float: left;
+			}
+			.secret{
+				text-align: left;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.secret span{
+				font-size: 10px;
+				color: #B4E7CD;
+			}
+			.secret p{
+				font-size: 12px;
+				margin-top: 10px;
+			}
+			.secret h3{
+				margin-top: 8px;
+				font-size: 14px;
+			}
+			
+/*听说结束*/
+/*聊聊开始*/
+			.chat{
+				margin-bottom: 20px;
+				background-color: #F5F5F5;
+			}
+			.life{
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				line-height: 40px;
+				text-align: center;
+				background-color: #47C5FA;
+				float: left;
+				color: #fff;
+			}
+			.ox{
+				float: left;
+				text-align: left;
+				width: 240px;
+				height: 80px;
+			}	
+			.ox p{
+				margin-top: 10px;
+				font-size: 12px;
+				text-align: left;
+				text-indent: 2em;
+			}	
+			.o2{
+				margin-right: 20px;
+				float: left;
+				margin-top: 20px;
+				margin-bottom: 30px;
+			}
+			/*.o3{
+				margin-right: 0;
+				margin-top: 10px;
+			}*/
+
+/*聊聊结束*/
+/*游记开始*/
+            .travel{
+            	margin-bottom: 30px;
+            	overflow: hidden;
+            }
+			.Rachel{
+				width: 215px;
+				height: 350px;
+				position: relative;
+				margin-right: 20px;
+				margin-top: 30px;
+				float: left;
+				margin-bottom: 20px;
+
+			}
+			.Rachel img{
+				width: 100%;
+				height: 100%;
+			}
+			.Rachel .text2{
+				position: absolute;
+				bottom: 15px;
+				left: 15px;
+				text-align: left;
+			}
+			.Rachel .text2 h3{
+				font-size: 12px;
+				margin: 5px 0;
+			}
+			.Rachel .text2 p{
+				font-size: 10px;
+				color: #B9DBF5;
+			}
+			.metoo{
+				margin-right: 0;
+			}
+			.text1{
+				position: absolute;
+				top: 120px;
+				left: 5px;
+				color: #fff;
+				font-size: 12px;
+				text-align: left;
+				text-indent: 2em;
+			}
+/*游记结束*/
+/*图片开始*/	.bjcolor,.chat,.hear{
+				background-color: #F5F5F5;
+				width: 100%;
+				overflow: hidden;
+				margin-top: 30px;
+			}
+			.index{
+				margin-top: 50px;
+				margin-bottom: 50px;
+				position: relative;
+			}
+			.index img{
+				width: 100%;
+				height: 100%;
+			}
+			.green{
+				position: absolute;				
+				top: 115px;
+				left: 230px;
+				width: 230px;
+				height: 115px;
+			}
+			.green .green1{
+				width: 100%;
+				height: 100%;
+			}
+			.photo{
+				position: absolute;
+				top: 70px;
+				left: 70px;
+				width: 110px;
+				height: 20px;
+			}
+			.photo img{
+				width: 100%;
+				height: 100%;
+			}
+			.photo1{
+				position: absolute;
+				top: 30px;
+				left: 100px;
+				width: 30px;
+				height: 30px;
+			}
+			.photo1 img{
+				width: 100%;
+				height: 100%;
+			}
+			
+/*图片结束*/
+/*页脚开始*/
+			footer{
+				background-color: #fff;
+				width: 100%;
+				height: 190px;
+			}
+		
+			.link{
+				border-bottom: 1px solid #C3C3C3;
+				width: 100%;
+				height: 115px;
+			}
+			.link p{
+				margin-bottom: 10px;
+				font-size: 14px;
+				text-align: left;
+			}
+			.link ul{
+				height: :15px;
+				list-style: none;
+				text-align: left;
+				float: left;
+			}
+			.link ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.link ul li a{
+				color: gray;
+				font-size: 10px;
+				text-decoration: none;
+			}
+			.QRcode{
+				margin-bottom: 50px;
+			}
+			.QRcode>img{
+				width: 55px;
+				height: 55px;
+			}
+			.wrap2{
+				width: 400px;
+				height: 30px;
+				margin:  0 auto;
+				color: #333;
+			}
+			.wrap2.ul li{
+				float: left;
+			}
+			.wrap3{
+				margin: 0 auto;
+				width: 300px;
+				height: 20px;
+				font-size: 10px;
+				color: #ccc;
+			}
+/*页脚结束*/
+		</style>
+		
+	</head>
+	<body>
+		<!--导航开始-->
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="nav">
+					<ul>
+						<li class="color"><a href="index.html">首页</a><span class="tri"></span></li>
+						<li><a href="movement.html">乐章</a></li>
+						<li class="active"><a href="#">音乐说 <span >12</span></a></li>
+						<li><a href="#">乐趣</a></li>
+						<li><a href="#">聊聊</a></li>
+						<li><a href="#">游记</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="eslite.html">成品</a></li>
+						<li><a href="#">蓝莓酱</a></li>
+						<li><a href="#">社区</a></li>
+					</ul>
+				</div>
+				<div class="enter">
+					<div class="enter_left">
+						<input type="text" />
+						<button><i>镜</i></button>
+					</div>
+					<div class="enter_right">
+						<ul>
+							<li><a href="register.html">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+<!--导航结束-->
+<!--背景图开始-->
+		<div class="swiper-container box" id="sowing">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<!--<img src="img/indexbj.png" alt="背景图" />-->
+		        	<div class="Ireland ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s">
+				    	<h3>我在爱尔兰，看着世界的阳光</h3>
+				    	<p>爱尔兰共和国（爱尔兰语：Poblacht na hÉireann；英语：Republic of Ireland），
+				    		简称“爱尔兰”（Ireland），是一个西欧的议会共和制国家，西临大西洋，东靠爱尔兰海，与英国隔海相望，
+				    		是北美通向欧洲的通道，爱尔兰自然环境保持得相当好，素有“翡翠岛国”之称，全国绿树成荫，河流纵横。
+				    		草地遍布，所以又有“绿岛”和“绿宝石”之称。</p>
+		    		</div>
+		        </div>
+		       	<div class="swiper-slide">
+		       		<img src="img/indexbj.png" alt="背景图" />
+		       		<div class="Ireland ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+				    	<h3>我在爱尔兰，看着世界的阳光</h3>
+				    	<p>爱尔兰共和国（爱尔兰语：Poblacht na hÉireann；英语：Republic of Ireland），
+				    		简称“爱尔兰”（Ireland），是一个西欧的议会共和制国家，西临大西洋，东靠爱尔兰海，与英国隔海相望，
+				    		是北美通向欧洲的通道，爱尔兰自然环境保持得相当好，素有“翡翠岛国”之称，全国绿树成荫，河流纵横。
+				    		草地遍布，所以又有“绿岛”和“绿宝石”之称。</p>
+		    		</div>
+		       	</div>
+		       	<div class="swiper-slide">
+		       		<!--<img src="img/indexbj.png" alt="背景图" />-->
+		       		<div class="Ireland ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+				    	<h3>我在爱尔兰，看着世界的阳光</h3>
+				    	<p>爱尔兰共和国（爱尔兰语：Poblacht na hÉireann；英语：Republic of Ireland），
+				    		简称“爱尔兰”（Ireland），是一个西欧的议会共和制国家，西临大西洋，东靠爱尔兰海，与英国隔海相望，
+				    		是北美通向欧洲的通道，爱尔兰自然环境保持得相当好，素有“翡翠岛国”之称，全国绿树成荫，河流纵横。
+				    		草地遍布，所以又有“绿岛”和“绿宝石”之称。</p>
+		    		</div>
+		       	</div>
+		       	<div class="swiper-slide">
+		       		<!--<img src="img/indexbj.png" alt="背景图" />-->
+		       		<div class="Ireland ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+				    	<h3>我在爱尔兰，看着世界的阳光</h3>
+				    	<p>爱尔兰共和国（爱尔兰语：Poblacht na hÉireann；英语：Republic of Ireland），
+				    		简称“爱尔兰”（Ireland），是一个西欧的议会共和制国家，西临大西洋，东靠爱尔兰海，与英国隔海相望，
+				    		是北美通向欧洲的通道，爱尔兰自然环境保持得相当好，素有“翡翠岛国”之称，全国绿树成荫，河流纵横。
+				    		草地遍布，所以又有“绿岛”和“绿宝石”之称。</p>
+		    		</div>
+		       	</div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		        
+		</div>
+
+<!--背景图结束-->
+<!--乐章开始-->
+		<div class="music">
+			<div class="yueZ">
+				<img src="img/yueZ.png" alt="" />
+			</div>
+			
+			<div class="swiper-container" id="hear">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="wrap">
+					
+							<div class="time">
+								<img src="img/a.png" alt="" />
+								<div class="text">
+									<h4>岁月不老，一世倾城</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+							<div class="time">
+								<img src="img/a.png" alt="" />
+								<div class="text">
+									<h4>岁月不老，一世倾城</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+							<div class="time">
+								<img src="img/a.png" alt="" />
+								<div class="text">
+									<h4>岁月不老，一世倾城</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+							<div class="time">
+								<img src="img/a.png" alt="" />
+								<div class="text">
+									<h4>岁月不老，一世倾城</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+						
+						</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="wrap">
+					
+					<div class="time">
+						<img src="img/a.png" alt="" />
+						<div class="text">
+							<h4>岁月不老，一世倾城</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/a.png" alt="" />
+						<div class="text">
+							<h4>岁月不老，一世倾城</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/a.png" alt="" />
+						<div class="text">
+							<h4>岁月不老，一世倾城</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+					<img src="img/a.png" alt="" />
+					<div class="text">
+						<h4>岁月不老，一世倾城</h4>
+						<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+						<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+							 流年，在等谁的相濡以沫…… 					
+							 悠长岁月平静，无事亦是蹉跎……							
+							 朝花夕拾，捡的尽是枯萎…… 							
+							 当有时间时要利用时间，因为时间稍纵即逝。</p>
+							 <i>点赞</i><i>微信</i>
+					</div>
+				</div>
+						
+			</div></div>
+			        <div class="swiper-slide"><div class="wrap">
+					
+					<div class="time">
+						<img src="img/a.png" alt="" />
+						<div class="text">
+							<h4>岁月不老，一世倾城</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/a.png" alt="" />
+						<div class="text">
+							<h4>岁月不老，一世倾城</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/a.png" alt="" />
+						<div class="text">
+							<h4>岁月不老，一世倾城</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+					<img src="img/a.png" alt="" />
+					<div class="text">
+						<h4>岁月不老，一世倾城</h4>
+						<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+						<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+							 流年，在等谁的相濡以沫…… 					
+							 悠长岁月平静，无事亦是蹉跎……							
+							 朝花夕拾，捡的尽是枯萎…… 							
+							 当有时间时要利用时间，因为时间稍纵即逝。</p>
+							 <i>点赞</i><i>微信</i>
+					</div>
+				</div>
+						
+			</div></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			</div>
+			
+		</div>
+<!--乐章结束-->
+<!--听说开始-->
+		<div class="hear">
+			<div class="listening">
+				<img src="img/hear.png" alt="listening" />
+			</div>
+			<div class="wrap1">
+				<div class="Jay">
+					<img src="img/Jay.png" alt="Jay" />
+					<div class="secret">
+						<span>国语/周杰伦</span>
+						<h3>不能说的秘密</h3>
+						<p>在新加坡举行首场演出   ；
+							1月18日，发行其个人作词、作曲的单曲《等你下课》  ；
+							在中央电视台春节联欢晚会上，周杰伦歌曲《告白气球》
+							在2018年央视春晚节目收视率TOP10榜单中位列第一位</p>
+					</div>
+					<img src="img/jj.png" alt="Jay" />
+					<div class="secret">
+						<span>国语/周杰伦</span>
+						<h3>不能说的秘密</h3>
+						<p>在新加坡举行首场演出   ；
+							1月18日，发行其个人作词、作曲的单曲《等你下课》  ；
+							在中央电视台春节联欢晚会上，周杰伦歌曲《告白气球》
+							在2018年央视春晚节目收视率TOP10榜单中位列第一位</p>
+					</div>
+					<img src="img/b.png" alt="Jay" />
+					<div class="secret">
+						<span>国语/周杰伦</span>
+						<h3>不能说的秘密</h3>
+						<p>在新加坡举行首场演出   ；
+							1月18日，发行其个人作词、作曲的单曲《等你下课》  ；
+							在中央电视台春节联欢晚会上，周杰伦歌曲《告白气球》
+							在2018年央视春晚节目收视率TOP10榜单中位列第一位</p>
+					</div>
+					<img src="img/c.png" alt="Jay" />
+					<div class="secret">
+						<span>国语/周杰伦</span>
+						<h3>不能说的秘密</h3>
+						<p>在新加坡举行首场演出   ；
+							1月18日，发行其个人作词、作曲的单曲《等你下课》  ；
+							在中央电视台春节联欢晚会上，周杰伦歌曲《告白气球》
+							在2018年央视春晚节目收视率TOP10榜单中位列第一位</p>
+					</div>
+					<img src="img/d.png" alt="Jay" />
+					<div class="secret">
+						<span>国语/周杰伦</span>
+						<h3>不能说的秘密</h3>
+						<p>在新加坡举行首场演出   ；
+							1月18日，发行其个人作词、作曲的单曲《等你下课》  ；
+							在中央电视台春节联欢晚会上，周杰伦歌曲《告白气球》
+							在2018年央视春晚节目收视率TOP10榜单中位列第一位</p>
+					</div>
+				</div>
+			</div>
+		</div>
+<!--听说结束-->
+<!--乐趣开始-->
+		<div class="happy">
+			<div class="interesting">
+				<img src="img/instristing.png" alt="interesting" />
+			</div>
+			<div class="swiper-container" id="interesting">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="wrap">
+					
+							<div class="time">
+								<img src="img/e.png" alt="" />
+								<div class="text">
+									<h4>廉价的多功能变焦老头</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+							<div class="time">
+								<img src="img/e.png" alt="" />
+								<div class="text">
+									<h4>廉价的多功能变焦老头</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+							<div class="time">
+								<img src="img/e.png" alt="" />
+								<div class="text">
+									<h4>廉价的多功能变焦老头</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+							<div class="time">
+								<img src="img/e.png" alt="" />
+								<div class="text">
+									<h4>廉价的多功能变焦老头</h4>
+									<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+									<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+										 流年，在等谁的相濡以沫…… 					
+										 悠长岁月平静，无事亦是蹉跎……							
+										 朝花夕拾，捡的尽是枯萎…… 							
+										 当有时间时要利用时间，因为时间稍纵即逝。</p>
+										 <i>点赞</i><i>微信</i>
+								</div>
+							</div>
+						
+						</div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<div class="wrap">
+					
+					<div class="time">
+						<img src="img/e.png" alt="" />
+						<div class="text">
+							<h4>廉价的多功能变焦老头</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/e.png" alt="" />
+						<div class="text">
+							<h4>廉价的多功能变焦老头</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/e.png" alt="" />
+						<div class="text">
+							<h4>廉价的多功能变焦老头</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+					<img src="img/e.png" alt="" />
+					<div class="text">
+						<h4>廉价的多功能变焦老头</h4>
+						<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+						<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+							 流年，在等谁的相濡以沫…… 					
+							 悠长岁月平静，无事亦是蹉跎……							
+							 朝花夕拾，捡的尽是枯萎…… 							
+							 当有时间时要利用时间，因为时间稍纵即逝。</p>
+							 <i>点赞</i><i>微信</i>
+					</div>
+				</div>
+						
+			</div></div>
+			        <div class="swiper-slide"><div class="wrap">
+					
+					<div class="time">
+						<img src="img/e.png" alt="" />
+						<div class="text">
+							<h4>廉价的多功能变焦老头</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/e.png" alt="" />
+						<div class="text">
+							<h4>廉价的多功能变焦老头</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+						<img src="img/e.png" alt="" />
+						<div class="text">
+							<h4>廉价的多功能变焦老头</h4>
+							<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+							<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+								 流年，在等谁的相濡以沫…… 					
+								 悠长岁月平静，无事亦是蹉跎……							
+								 朝花夕拾，捡的尽是枯萎…… 							
+								 当有时间时要利用时间，因为时间稍纵即逝。</p>
+								 <i>点赞</i><i>微信</i>
+						</div>
+					</div>
+					<div class="time">
+					<img src="img/e.png" alt="" />
+					<div class="text">
+						<h4>廉价的多功能变焦老头</h4>
+						<p>小夏同学</p><span>5/23&nbsp&nbsp16:15</span>
+						<p class="sun">日光倾城而下，时光摆上的印记在身后层层腐朽 
+							 流年，在等谁的相濡以沫…… 					
+							 悠长岁月平静，无事亦是蹉跎……							
+							 朝花夕拾，捡的尽是枯萎…… 							
+							 当有时间时要利用时间，因为时间稍纵即逝。</p>
+							 <i>点赞</i><i>微信</i>
+					</div>
+				</div>
+						
+			</div></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			</div>
+			
+			
+		</div>
+<!--乐趣结束-->
+<!--聊聊开始-->
+		<div class="chat">
+			<div class="chating">
+				<img src="img/chat.png" alt="" />
+			</div>
+			
+			<div class="swiper-container" id="chat">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<div class="wrap">
+				
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2 o3">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2 o3">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+			</div></div>
+			        <div class="swiper-slide"><div class="wrap">
+				
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2 o3">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2 o3">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+			</div></div>
+			        <div class="swiper-slide"><div class="wrap">
+				
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2 o3">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+				<div class="o2 o3">
+					<div class="life">生活</div>
+					<div class="ox">
+						<h4>臭氧也算是大气污染物么？</h4>
+						<p>臭氧（O₃）又称为超氧，是氧气（O₂）的同素异形体，在常温下，它是一种有特殊臭味的淡蓝色气体。
+							在常温常压下，稳定性较差，可自行分解为氧气。臭氧具有青草的味道，吸入少量对人体有益，吸入过量对人体健康有一定危害。
+							不可燃，纯净物。</p>
+					</div>
+				</div>
+			</div>
+			        </div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			    
+			 
+			</div>
+			
+			
+		</div>
+
+<!--聊聊结束-->
+<!--游记开始-->
+		<div class="travel">
+			<div class="travelNote">
+				<img src="img/play.png" alt="travel" />
+			</div>
+			
+			<div class="swiper-container" id="travel">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide"><div class="wrap">
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel metoo">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+			</div></div>
+		        <div class="swiper-slide"><div class="wrap">
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel metoo">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+			</div></div>
+		        <div class="swiper-slide"><div class="wrap">
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+				<div class="Rachel metoo">
+					<img src="img/f.png" alt="pic" />
+					<div class="text1">
+						遇见双廊，骑行洱海，这可能就是来大理最该做的一件事！这里湖水清澈见底，风景一眼忘不见头，天空蓝得很美很美。
+					</div>
+					<div class="text2">
+						<h3>跨越赤道的蜜月行，醉美毛里求斯</h3>
+						<p>余頭西小姐&nbsp;&nbsp;Rachel</p>
+					</div>
+				</div>
+			</div></div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		    
+			</div>
+		</div>
+<!--游记结束-->
+<!--图片开始-->
+		<div class="bjcolor">
+			<div class="wrap index">
+				<img src="img/j.png" alt="pic" />
+				<div class="green">
+					<img src="img/h.png" alt="green" class="green1" />
+					<div  class="photo">
+						<img src="img/i.png"/>
+					</div>
+					<div  class="photo1">
+						<img src="img/k.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+<!--图片结束-->
+<!--页脚开始-->
+		<footer>
+			<div class="link">
+			<div class="wrap1">
+				<p>友情链接</p>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<div class="QRcode">
+					<img src="img/dimension1.png"/>
+					
+					<img src="img/QRcode.png"/>
+					
+				</div>
+			</div>
+			<div class="wrap2">
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">团队成员</a></li>
+					<li><a href="#">商务合作</a></li>
+				</ul>
+			</div>
+			<div class="wrap3">
+				<ul>
+					<li><a href="#">蓝莓派版权所有</a></li>
+					<li><a href="#">京IPC备1234567号</a></li>
+				</ul>
+			</div>
+		</div>
+		
+			
+			
+		</footer>
+<!--页脚结束-->
+<script src="js/swiper.min.js"></script>
+<script src = "js/Ajax.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+
+	<script>  
+//背景图开始
+		
+		  var mySwiper = new Swiper ('#sowing', {
+		    direction: 'horizontal',
+		    loop: true,
+		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		    onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+		    swiperAnimateCache(swiper); //隐藏动画元素 
+		    swiperAnimate(swiper); //初始化完成开始动画
+		  }, 
+		  onSlideChangeEnd: function(swiper){ 
+		    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+		  } 
+		  })  
+		  
+		  
+		  
+		  //当页面结构接啊在完毕时，需要向后台指定PHP文件获取相关资源
+		  
+		  Dreamy({
+		  	method:'get',
+		  	url:'php/index.php',
+		  	async:true,
+		  	data:{
+		  		res:'bannerImg',
+		  	},
+		  	img/indexbj.png
+		  	success:function(response){
+		  		$('.swiper-container').css({
+		  			'background': "url("+response.bannerImg+") no-repeat 50%",
+		  			'background-size':'cover'
+		  		});
+		  	}
+		  });
+		  
+		  
+		  
+		  
+		  
+		  
+// 背景图结束
+
+//乐章开始
+		var hear = new Swiper ('#hear', {
+		    direction: 'horizontal',
+		    loop: true,
+		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		    
+		  })       
+
+//乐章结束
+//乐趣开始
+		var ins = new Swiper ('#interesting', {
+		    direction: 'horizontal',
+		    loop: true,
+		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		    
+		  })  
+//乐趣结束
+//聊聊开始
+		var say = new Swiper ('#chat', {
+		    direction: 'horizontal',
+		    loop: true,
+		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		    
+		  })  
+
+//聊聊结束
+//游记开始
+		var play = new Swiper ('#travel', {
+		    direction: 'horizontal',
+		    loop: true,
+		    
+		    // 如果需要分页器
+		    pagination: '.swiper-pagination',
+		    
+		  })  
+//游记结束
+	</script>
+	</body>
+</html>

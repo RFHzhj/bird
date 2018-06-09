@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+		<link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
+		<style>
+/*导航开始*/
+			header{
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+				background-color: #24292C;
+			}
+			.wrap{
+				width: 900px;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.logo{
+				width: 125px;
+				height: 35px;
+				margin-top: 13px;
+				float: left;
+			}
+			.logo img{
+				width: 100%;
+				height: 100%;
+			}	
+			.nav{
+				margin-left: 20px;
+				margin-top: -15px;
+				width: 500px;
+				height: 20px;
+				float: left;
+			}
+			.nav>ul{
+				list-style: none;
+			}
+			.nav li{
+				float: left;
+				margin-right: 15px;
+			}
+			.nav li a{
+				color: #fff;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.enter{
+				float: right;
+				width: 250px;
+				height: 20px;
+			}
+			.enter .enter_left{
+				width: 120px;
+				height: 20px;
+				float: left;
+				margin-top: 30px;
+				/*border: 1px solid #333;
+				border-radius: 80px;
+				*/
+			}
+			
+			.enter_left input{
+				width: 100px;
+				height: 20px;
+				background-color: #000000;
+				border: none;
+				float: left;
+				border-radius: 30px 0 0 30px;
+			}
+			.enter_left button{
+				width: 20px;
+				height: 20px;
+				float: left;
+				border: none;
+				background-color: #27BD75;
+				color: #fff;
+				font-size: 12px;
+				border-radius: 0 30px 30px 0;
+			}
+			.enter .enter_right{
+				width: 100px;
+				height: 20px;
+				float:left;
+				margin-top: -15px;
+			}
+			.enter_right ul{
+				list-style: none;
+			}
+			.enter_right ul li{
+				float: left;
+				margin-right: 5px;
+			}
+			.enter_right ul li a{
+				font-size: 12px;
+				color: #fff;
+				text-decoration: none;
+			}
+/*导航结束*/
+/*背景图开始*/
+			.box{
+				width: 100%;
+				position: relative;
+			}
+			.bj{
+				width: 100%;
+				height: 580px;
+				background: url("img/bj.png") no-repeat;
+				background-size:cover;
+			}
+			.register{
+				width: 250px;
+				height: 290px;
+				position: absolute;
+				top: 150px;
+				left: 570px;
+				background-color: rgba(0,0,0,.2);
+				padding: 15px;
+				box-sizing: border-box;
+			}
+			.register>button:first-child{
+				background-color: #fff;
+				width: 105px;
+				height: 30px;
+				border: none;
+				margin-right: 5px;
+				letter-spacing: 8px;
+				text-align: center;
+			}
+			.register>button:nth-child(2){
+				background-color: #E65E42;
+				width: 105px;
+				height: 30px;
+				border: none;
+				color: #fff;
+				letter-spacing: 8px;
+			}
+			.register input{
+				margin-top: 10px;
+				width: 215px;
+				height: 25px;
+			}
+			.register>input:nth-child(5){
+				width: 105px;
+				height: 25px;	
+				margin-right: 5px;
+				float: left;
+			}
+			.register>button:nth-child(6){
+				width: 105px;
+				height: 30px;
+				border: none;	
+				float: left;
+				margin-top: 10px;
+			}
+			.register>button:nth-child(6) img{
+				width: 100%;
+				height: 100%;
+			}
+			.register>button:nth-child(7){
+				margin-top: 10px;
+				width: 215px;
+				height: 30px;
+				background-color: #7FA900;
+				border: none;
+				color: #fff;
+				letter-spacing: 10px;
+			}
+			.register p{
+				font-size: 5px;
+				color: #fff;
+			}
+			.register i{
+				display: inline-block;
+				float: left;
+				color: #fff;
+			}
+			.register>p:nth-child(12){
+				float: right;
+				margin-top: 10px;
+			}
+/*背景图结束*/
+/*页脚开始*/
+			footer{
+				background-color: #fff;
+				width: 100%;
+				height: 190px;
+			}
+		
+			.wrap1{
+				width: 750px;
+				margin: 0 auto;
+			
+			}
+			.link{
+				border-bottom: 1px solid #C3C3C3;
+				width: 100%;
+				height: 115px;
+			}
+			.link p{
+				margin-bottom: 25px;
+				font-size: 12px;
+			}
+			.link ul{
+				display: inline-block;
+				width: 400px;
+				height: :15px;
+				list-style: none;
+				margin-top: -20px;
+				text-align: left;
+				margin-left: 0;
+				float: left;
+			}
+			.link ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.link ul li a{
+				color: gray;
+				font-size: 10px;
+				text-decoration: none;
+			}
+			.QRcode{
+				margin-bottom: 80px;
+			}
+			.QRcode>img{
+				width: 55px;
+				height: 55px;
+			}
+			.wrap2{
+				width: 265px;
+				height: 30px;
+				margin:  0 auto;
+				color: #333;
+			}
+			.wrap3{
+				margin: 0 auto;
+				width: 160px;
+				height: 20px;
+				font-size: 10px;
+				color: #ccc;
+			}
+/*页脚结束*/
+		</style>
+	</head>
+	<body>
+<!--导航开始-->
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="movement.html">乐章</a></li>
+						<li><a href="#">音乐说</a></li>
+						<li><a href="#">乐趣</a></li>
+						<li><a href="#">聊聊</a></li>
+						<li><a href="#">游记</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="eslite.html">成品</a></li>
+						<li><a href="#">蓝莓酱</a></li>
+						<li><a href="#">社区</a></li>
+					</ul>
+				</div>
+				<div class="enter">
+					<div class="enter_left">
+						<input type="text" />
+						<button><i>镜</i></button>
+					</div>
+					<div class="enter_right">
+						<ul>
+							<li><a href="register.html">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+<!--导航结束-->
+<!--背景图开始-->
+	<div class="box">
+		<div class="bj">
+			<div class="register">
+				<button>登录</button>
+				<button>注册</button>
+				<input type="text" placeholder="用户账号"/>
+				<input type="password" placeholder="用户密码"/>
+				<input type="text"  placeholder="验证码"/>
+				<button><img src="img/code.png" alt="code" /></button>
+				<button>登录</button>
+				<p>你还可以用第三方账号登录</p>
+				<i>企鹅</i>
+				<i>微信</i>
+				<i>微博</i>
+				<p>忘记密码</p>
+			</div>
+		</div>
+	</div>	
+<!--背景图结束-->	
+<!--页脚开始-->
+	<footer>		
+		<div class="link">
+			<div class="wrap1">
+				<p>友情链接</p>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<div class="QRcode">
+					<img src="img/dimension1.png"/>
+					
+					<img src="img/QRcode.png"/>
+					
+				</div>
+			</div>
+			<div class="wrap2">
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">团队成员</a></li>
+					<li><a href="#">商务合作</a></li>
+				</ul>
+			</div>
+			<div class="wrap3">
+				<ul>
+					<li><a href="#">蓝莓派版权所有</a></li>
+					<li><a href="#">京IPC备1234567号</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+	</footer>
+
+
+<!--页脚结束-->
+	</body>
+</html>

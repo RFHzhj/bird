@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>乐章</title>
+		<link rel="stylesheet" href="css/reset.css	" />
+		<style>
+			body{
+				background-color: #F6F6F6;
+			}
+			/*导航开始*/
+			header{
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+				background-color: #24292C;
+				overflow: hidden;	
+			}
+			.wrap{
+				width: 900px;
+				height: 100%;
+				margin: 0 auto;
+				
+			}
+			.logo{
+				width: 125px;
+				height: 35px;
+				float: left;
+			}
+			.logo img{
+				width: 100%;
+				height: 100%;
+			}	
+			.nav{
+				margin-left: 20px;
+				float: left;
+			}
+			.nav>ul{
+				list-style: none;
+				overflow: hidden;
+			}
+			.nav li{
+				float: left;
+				height: 80px;
+				padding: 0 4px;
+				line-height: 80px;
+				position: relative;
+			}
+			
+			.nav li a{
+				color: #fff;
+				text-decoration: none;
+				padding: 3px 3px;
+				
+				/*display: inline-block;*/
+			}
+			.nav .color>a{
+				background-color: #109E5C;
+			}
+			.nav li .tri{
+				position: absolute;
+				left: 10px;
+				bottom: 0;
+				width: 0;
+				height: 0;
+				border: 10px  transparent solid;
+				border-bottom: #fff 10px solid;
+				/*display: none;*/
+			}
+			/*.nav li.color .tri{
+				display: block;
+			}*/
+			.nav li.active>a{
+				position: relative;
+			}
+			.nav li.active>a>span{
+				position: absolute;
+				left: 35px;
+				top: -8px;
+				width: 18px;
+				height: 18px;
+				border-radius: 50%;
+				background-color: red;
+				color: #fff;
+				line-height: 18px;
+				text-align: center;
+			}
+			.enter{
+				float: right;
+				width: 250px;
+				height: 20px;
+				
+			}
+			.enter .enter_left{
+				width: 120px;
+				height: 20px;
+				float: left;
+				margin-top: 30px;
+			
+			}
+			
+			.enter_left input{
+				width: 100px;
+				height: 20px;
+				background-color: #000000;
+				border: none;
+				float: left;
+				border-radius:  30px 0 0 30px;
+			}
+			.enter_left button{
+				width: 20px;
+				height: 20px;
+				float: left;
+				border: none;
+				background-color: #27BD75;
+				color: #fff;
+				font-size: 12px;
+				border-radius: 0 30px 30px 0;
+			}
+			.enter .enter_right{
+				width: 100px;
+				height: 20px;
+				float:left;
+				margin-left: 25px;
+			}
+			.enter_right ul{
+				list-style: none;
+			}
+			.enter_right ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.enter_right ul li a{
+				font-size: 12px;
+				color: #fff;
+				text-decoration: none;
+			}
+			
+/*导航结束*/
+/*创建小组开始*/
+			.movement{
+				width: 980px;
+				margin: 100px auto;
+				background-color: #fff;
+				border: 2px solid #ccc;
+				box-shadow: 0 5px 5px #ccc;
+				padding: 30px;
+			}
+			.creation{
+				text-align: center;
+				font-size: 23px;
+				color: #83C5AB;
+			}
+			.creation span{				
+				float: left;
+				color: gray;
+				font-weight: bolder;
+				font-size: 14px;	
+			}
+			.introduce{
+				float: left;
+				
+			}
+			.introduce>div{
+				float: left;
+				margin-top: 20px;
+			}
+			.introduce input{
+				border: solid #ccc 1px;
+				width: 560px;
+				padding: 8px;
+			}
+			.introduce div .email{
+				width: 270px;
+				margin-right: 20px;
+			}
+			.introduce div .QQ{
+				width: 270px;
+			}
+			.portrait{
+				float: right;
+				margin-top: 20px;
+				background: #F7F7F7;
+			}
+			.movement button{
+				width: 130px;
+				height: 40px;
+				border-radius: 30px;
+				background-color: #F68344;
+				color: #fff;
+				border: none;
+				line-height: 40px;
+				text-align: center;
+				margin: 20px auto;
+				font-size: 15px;
+			}
+			.movement>span{
+				margin-left: 10px;
+			}
+			.movement>span a{
+				color: #8FD0AE;
+			}
+/*创建小组结束*/
+/*页脚开始*/
+			footer{
+				background-color: #fff;
+				width: 100%;
+				height: 190px;
+			}
+		
+			.link{
+				border-bottom: 1px solid #C3C3C3;
+				width: 100%;
+				height: 115px;
+			}
+			.link p{
+				margin-bottom: 10px;
+				font-size: 14px;
+				text-align: left;
+			}
+			.link ul{
+				height: :15px;
+				list-style: none;
+				text-align: left;
+				float: left;
+			}
+			.link ul li{
+				float: left;
+				margin-right: 15px;
+			}
+			.link ul li a{
+				color: gray;
+				font-size: 10px;
+				text-decoration: none;
+			}
+			.QRcode{
+				margin-bottom: 50px;
+			}
+			.QRcode>img{
+				width: 55px;
+				height: 55px;
+			}
+			.wrap2{
+				width: 400px;
+				height: 30px;
+				margin:  0 auto;
+				color: #333;
+			}
+			.wrap2.ul li{
+				float: left;
+			}
+			.wrap3{
+				margin: 0 auto;
+				width: 300px;
+				height: 20px;
+				font-size: 10px;
+				color: #ccc;
+			}
+			.wrap1{
+				margin: 0 auto;
+				width: 980px;
+				padding: 20px;
+			}
+/*页脚结束*/
+		</style>
+	</head>
+	<body>
+		<!--导航开始-->
+		<header>
+			<div class="wrap">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="nav">
+					<ul>
+						<li class="color"><a href="index.html">首页</a><span class="tri"></span></li>
+						<li><a href="movement.html">乐章</a></li>
+						<li class="active"><a href="#">音乐说 <span >12</span></a></li>
+						<li><a href="#">乐趣</a></li>
+						<li><a href="#">聊聊</a></li>
+						<li><a href="#">游记</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="eslite.html">成品</a></li>
+						<li><a href="#">蓝莓酱</a></li>
+						<li><a href="#">社区</a></li>
+					</ul>
+				</div>
+				<div class="enter">
+					<div class="enter_left">
+						<input type="text" />
+						<button><i>镜</i></button>
+					</div>
+					<div class="enter_right">
+						<ul>
+							<li><a href="register.html">登录</a></li>
+							<li><a href="#">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+<!--导航结束-->
+<!--创建小组开始-->
+		<div class="movement">
+			<div class="creation">
+				<span>&lt; &nbsp;返回</span>
+				创建小组
+			</div>
+			
+				<div class="introduce">
+					<div>小组名称：<input type="text" placeholder="给您的小组起个名字吧~"/></div>
+					<div>小组介绍：<textarea name="introduce" id="introduce" cols="80" rows="10" placeholder="介绍一下您的小组吧~"></textarea></div>
+					<div>小组标签：<input type="text" />
+					<p>生活 健身 宠物 花艺 艺术 影视 摄影 媒体 绘画 美容</p> </div>
+					<div class="email">联系方式：<input type="email" placeholder="请输入邮箱地址" />
+					<div class="QQ"><input type="" name="" id="" placeholder="请输入QQ号码" /></div>
+					<p>请输入您的联系方式，以方便我们和您取得联系</p></div>
+				</div>
+				<div class="portrait">
+					<p>小组头像：</p>
+					<div class="pic">
+						<img src="img/smile.png" alt="" />
+						<img src="img/click.png" alt="" />
+					</div>		
+				</div>	
+			
+			<button>提交申请</button><br />
+			<input type="checkbox" /><span>我已阅读并同意<a href="#">蓝莓派小组服务协议</a></span>
+		</div>
+
+
+<!--创建小组结束-->
+<!--页脚开始-->
+		<footer>
+			<div class="link">
+			<div class="wrap1">
+				<p>友情链接</p>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+					<li><a href="#">豆瓣</a></li>
+				</ul>
+				<div class="QRcode">
+					<img src="img/dimension1.png"/>
+					
+					<img src="img/QRcode.png"/>
+					
+				</div>
+			</div>
+			<div class="wrap2">
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">团队成员</a></li>
+					<li><a href="#">商务合作</a></li>
+				</ul>
+			</div>
+			<div class="wrap3">
+				<ul>
+					<li><a href="#">蓝莓派版权所有</a></li>
+					<li><a href="#">京IPC备1234567号</a></li>
+				</ul>
+			</div>
+		</div>
+		
+			
+			
+		</footer>
+<!--页脚结束-->
+	</body>
+</html>
